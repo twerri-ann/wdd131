@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dosis", "EB Garamond" sans-serif;
+}
+
+h1 {
+    background-color: #ddd;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    font-family: "Dosis" serif;
+    text-align: center;
+}
+
+nav {
+    background-color: #36454f;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: overline;
+    color: yellow;
+}
+
+.active {
+    color: yellow;
+}
+
+/* larger/wider views **************************/
+@media (min-width: 200px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 0 auto;
+    }
+}
+
+main {
+    max-width: 150px;
+    margin: 40px auto;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
