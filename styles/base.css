@@ -1,11 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --heading-font: 'Dosis', serif;
+    --paragraph-front: 'EB Garamond', sans-serif;
 }
 
 body {
-    font-family: "Dosis", "EB Garamond" sans-serif;
+    font-family: var(--paragraph-front);
     background-color: #fff;
     margin: 0;
     padding: 0;
@@ -48,7 +47,6 @@ nav a:hover {
     color: yellow;
 }
 
-/* larger/wider views **************************/
 @media (min-width: 200px) {
     nav ul {
         display: flex;
@@ -59,22 +57,28 @@ nav a:hover {
     }
 }
 
-main {
+/* main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1400px; 
+}*/
+main{
     display: block;
     padding: 2rem;
 }
-
 
 section {
     background-color: #f4f4f4;
     padding: 1rem;
     border-radius: 10px;
-    width: 1000px;
+    width: 1400px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 section img {
-    width: 200px;
+    width: 300px;
     height: auto;
     display: block;
     margin: 1rem auto;
