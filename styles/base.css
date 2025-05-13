@@ -16,7 +16,7 @@ h1 {
     padding: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     font-size: 2rem;
-    font-family: "Dosis" serif;
+    font-family: var(--heading-font);
     text-align: center;
 }
 
