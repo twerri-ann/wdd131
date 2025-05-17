@@ -90,4 +90,6 @@ footer {
     font-family: var(--paragraph-front);
     background-color: navy;
     color: #fff;
+    display: flex;
+    justify-content: center;
 }
