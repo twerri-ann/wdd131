@@ -1,0 +1,93 @@
+:root {
+    --heading-font: 'Dosis', serif;
+    --paragraph-front: 'EB Garamond', sans-serif;
+}
+
+body {
+    font-family: var(--paragraph-front);
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+nav {
+    background-color: navy;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Boldonse', serif;
+}
+
+nav li {
+    flex: 1 1 auto;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 0.5rem;
+    margin: -0.14rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00af9a;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 200px) {
+
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;     
+}
+
+.figure {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+padding: 1rem;
+}
+
+/* For larger screens (e.g., tablets/desktops) */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}  
+
+figcaption {
+    font-family: var(--paragraph-front);
+}
+
+footer {
+    max-width: 1500px;
+    font-family: var(--paragraph-front);
+    background-color: navy;
+    color: #fff;
+}
