@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Place</title>
+    <meta name="description" content="This place will show information and picture of the place I grew up.">
+    <meta name="author" content="Terri-Ann Bassaragh">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Jamaica</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="images/Hero.jpg" alt="Hero">
+            <article class="Aone">
+                <h3>Data</h3>
+            </article>
+        <section class="weather">
+      <h2>Weather <span class="weather-icon"></span></h2>
+      <p>Temperature: <span id="temperature">45</span>°F</p>
+      <p>Wind Speed: <span id="windSpeed">10</span> mph</p>
+      <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+      <img src="images/weather.svg" alt="Weather icon" class="mobile-icon">
+    </section>    
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Terri-Ann Bassaragh, Jamaica </p><br>
+        <p> Last modified: <span id="modified"></span></p>        
+    </footer>
 </body>
 </html>
