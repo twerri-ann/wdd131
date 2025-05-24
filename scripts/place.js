@@ -6,24 +6,21 @@ yearSpan.textContent = currentYear;
 const modifiedSpan = document.getElementById("modified");
 modifiedSpan.textContent = document.lastModified;
 
-const temperature = parseFloat(document.getElementById("temperature").textContent);
-const windSpeed = parseFloat(document.getElementById("windSpeed").textContent);
+const temp = 27; 
+const windSpeed = 8; 
 
-function calculateWindChill(temp, speed) {
-  return (
-    35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) +
-    0.4275 * temp * Math.pow(speed, 0.16)
-  ).toFixed(1);
+function calculateWindChill(t, w) {
+  return 13.12 + 0.6215 * t - 11.37 * Math.pow(w, 0.16) + 0.3965 * t * Math.pow(w, 0.16);
 }
 
-function displayWindChill(temp, speed) {
-  const windChillEl = document.getElementById("windChill");
-
-  if (temp <= 50 && speed > 3) {
-    windChillEl.textContent = `${calculateWindChill(temp, speed)} °F`;
+function updateWindChill() {
+  const chillEl = document.getElementById("chill");
+  if (temp <= 10 && windSpeed > 4.8) {
+    const chill = calculateWindChill(temp, windSpeed).toFixed(1);
+    chillEl.textContent = `${chill} °C`;
   } else {
-    windChillEl.textContent = "N/A";
+    chillEl.textContent = "N/A";
   }
 }
 
-displayWindChill(temperature, windSpeed);
+updateWindChill();
