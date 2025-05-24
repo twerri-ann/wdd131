@@ -1,72 +1,65 @@
 :root {
-  --primary-color: green;
-  --secondary-color: yellow;
-  --font-stack: 'Segoe UI', sans-serif;
+  --primary: green;
+  --secondary: yellow;
+  --text: #fff;
 }
 
 body {
-  font-family: var(--font-stack);
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
 }
 
-h3 {
-    font-family: var(--font-stack);
-    background-color: yellow;
-}
-
-header, footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  max-width: 1500px;
-}
-
-.hero{
-    position: relative;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-}
-
-.hero article {
-    background-color: #ffffff61; 
-    position: absolute;
-    width: 500px;
-    top: 9rem;
-    left: 2rem;
-    right: 2rem;
-    padding: 2rem;
-}
-.weather {
+header {
+    background: var(--primary);
+    color: var(--text);
+    text-align: center;
     padding: 1rem;
-    background-color: #ffffff61;
-    position: absolute;
 }
 
-.weather h3 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+picture img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    position: relative;
+    background: white;
+    border-left: 5px solid var(--secondary);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .weather-icon::after {
-  content: "⛅";
+    content: "⛅";
+    margin-left: 0.5rem;
 }
 
-.mobile-icon {
-  display: none;
-  width: 40px;
+footer {
+    background: var(--primary);
+    color: var(--text);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
 }
 
-@media screen and (max-width: 600px) {
-  .weather-icon::after {
-    content: "";
+@media (min-width: 700px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
   }
-  .mobile-icon {
-    display: block;
+
+    .data-card, .weather-card {
+        width: 300px;
   }
 }
