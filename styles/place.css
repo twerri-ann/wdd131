@@ -44,6 +44,7 @@ header, footer {
 .weather {
     padding: 1rem;
     background-color: #ffffff61;
+    position: absolute;
 }
 
 .weather h3 {
