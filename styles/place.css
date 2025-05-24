@@ -45,25 +45,40 @@ h2 {
   margin: 1rem auto;
 }
 
-/* Wider view overlay layout */
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 250px;
+}
+
 @media (min-width: 700px) {
-  .hero-container {
-    position: relative;
-  }
+    .weather-card {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
 
-  .data-card, .weather-card {
-    position: absolute;
-  }
+    .weather-card h2::after {
+        content: " ⛅"; /* or ☁️ */
+        font-size: 1.5rem;
+        color: #333;
+        margin-left: 0.5rem;
+    }    
 
-  .data-card {
-    top: 20%;
-    left: 5%;
-  }
+    .hero-container {
+        position: relative;
+    }
 
-  .weather-card {
-    top: 20%;
-    right: 5%;
-  }
+    .data-card {
+        position: absolute;
+    }
+
+    .data-card {
+        top: 20%;
+        left: 5%;
+    }
 }
 
 
