@@ -17,32 +17,55 @@ header {
     padding: 1rem;
 }
 
-picture img {
-    width: 100%;
-    height: auto;
+h2 {
+    background-color: var(--secondary);
+}
+
+.hero-container {
+  position: relative;
+}
+
+.hero-container picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base card styles */
+.data-card, .weather-card {
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 250px;
+}
+
+/* Default layout (mobile): stacked */
+.data-card, .weather-card {
+  margin: 1rem auto;
+}
+
+/* Wider view overlay layout */
+@media (min-width: 700px) {
+  .hero-container {
     position: relative;
-    display: block;
-}
+  }
 
-main {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-section {
+  .data-card, .weather-card {
     position: absolute;
-    background: white;
-    border-left: 5px solid var(--secondary);
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .data-card {
+    top: 20%;
+    left: 5%;
+  }
+
+  .weather-card {
+    top: 20%;
+    right: 5%;
+  }
 }
 
-.weather-icon::after {
-    content: "⛅";
-    margin-left: 0.5rem;
-}
 
 footer {
     background: var(--primary);
@@ -50,16 +73,4 @@ footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
-}
-
-@media (min-width: 700px) {
-    main {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-  }
-
-    .data-card, .weather-card {
-        width: 300px;
-  }
 }

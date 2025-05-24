@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place</title>
-    <meta name="description" content="This place will show information and picture of the place I grew up.">
+    <meta name="description" content="This page shows about the place I grw up in. Information co ntains basic and geographical knowlegde as well the current weather conditions of the island.">
     <meta name="author" content="Terri-Ann Bassaragh">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,29 +18,31 @@
         <h1>Jamaica</h1>
     </header>
     <main>
-        <picture>
-            <img src="images/Hero.webp" alt="Scenic view of Jamaica" />
-        </picture>
+        <div class="hero-container">
+            <picture>
+                <img src="images/Hero.webp" alt="Scenic view of Jamaica" />
+            </picture>
 
-        <section class="data">
-            <h2>Data</h2>
-            <p><strong>Area:</strong> 10,991 sq km</p>
-            <p><strong>Population:</strong> 2,837,077</p>
-            <p><strong>Capital:</strong> Kingston</p>
-            <p><strong>Languages:</strong> English, Jamaican Patois</p>
-            <p><strong>Currency:</strong> Jamaican Dollar</p>
-            <p><strong>Time Zone:</strong> UTC−5</p>
-            <p><strong>Calling Code:</strong> +1 876</p>
-            <p><strong>Internet TLD:</strong> .jm</p>
-        </section>
+            <section class="data-card">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 10,991 sq km</p>
+                <p><strong>Population:</strong> 2,837,077</p>
+                <p><strong>Capital:</strong> Kingston</p>
+                <p><strong>Languages:</strong> English, Jamaican Patois</p>
+                <p><strong>Currency:</strong> Jamaican Dollar</p>
+                <p><strong>Time Zone:</strong> UTC−5</p>
+                <p><strong>Calling Code:</strong> +1 876</p>
+                <p><strong>Internet TLD:</strong> .jm</p>
+            </section>
 
-        <section class="weather">
-            <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
-            <p><strong>Temperature:</strong> <span id="temp">27°C</span></p>
-            <p><strong>Conditions:</strong> Sunny</p>
-            <p><strong>Wind:</strong> <span id="wind">8 km/h</span></p>
-            <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
-        </section>
+            <section class="weather-card">
+                <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
+                <p><strong>Temperature:</strong> <span id="temp">27°C</span></p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> <span id="wind">8 km/h</span></p>
+                <p><strong>Wind Chill:</strong> <span id="chill">N/A</span></p>
+            </section>
+        </div>    
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Terri-Ann Bassaragh, Jamaica </p><br>
