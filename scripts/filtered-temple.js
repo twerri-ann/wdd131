@@ -115,9 +115,7 @@ function displayTemples(filteredList) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("home").addEventListener("click", () => displayTemples(temples));
-});
+document.getElementById("home").addEventListener("click", () => displayTemples(temples));
 document.getElementById("old").addEventListener("click", () => displayTemples(filterOld()));
 document.getElementById("new").addEventListener("click", () => displayTemples(filterNew()));
 document.getElementById("large").addEventListener("click", () => displayTemples(filterLarge()));
