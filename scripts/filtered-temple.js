@@ -61,7 +61,7 @@ const temples = [
     dedicated: "1919, November, 27",
     area: 42077,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/laie-hawaii-temple/laie-hawaii-temple-3794.jpg"
+    "https://www.churchofjesuschrist.org/media/image/laie-temple-bcff33b?lang=eng&collectionId=a5ad1f9eb7eb4547b09a4925cab790b8"
   },
   {
     templeName: "Santo Domingo",
@@ -69,7 +69,7 @@ const temples = [
     dedicated: "2000, September, 17",
     area: 67000,
     imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/santo-domingo-dominican-republic-temple/santo-domingo-dominican-republic-temple-3371.jpg"
+    "https://churchofjesuschrist.org/imgs/e00d60e1e8aff1132e62a889068128e53917a528/full/320%2C/0/default"
   },
   {
     templeName: "Bern Switzerland",
@@ -77,16 +77,16 @@ const temples = [
     dedicated: "1955, September, 11",
     area: 35546,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-2793.jpg"
+    "https://www.churchofjesuschrist.org/imgs/d987d547ea75e1556e719efd8cf1a3067cfc40c4/full/320%2C/0/default"
   }
 ];
 
 function filterOld() {
-  return temples.filter(t => t.dedicated < 1900);
+  return temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
 }
 
 function filterNew() {
-  return temples.filter(t => t.dedicated > 2000);
+  return temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
 }
 
 function filterLarge() {
