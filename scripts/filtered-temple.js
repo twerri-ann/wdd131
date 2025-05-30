@@ -105,8 +105,8 @@ function displayTemples(filteredList) {
     const card = document.createElement("div");
     card.className = "temple-card";
     card.innerHTML = `
-      <h3>${t.name}</h3>
-      <img src="${t.image}" alt="${t.name}" loading="lazy">
+      <h3>${t.templeName}</h3>
+      <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
       <p><strong>Location:</strong> ${t.location}</p>
       <p><strong>Dedicated:</strong> ${t.dedicated}</p>
       <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
