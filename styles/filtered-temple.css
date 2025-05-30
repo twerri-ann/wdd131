@@ -1,0 +1,108 @@
+:root {
+    --heading-font: 'Dosis', serif;
+    --paragraph-front: 'EB Garamond', sans-serif;
+}
+
+body {
+    font-family: var(--paragraph-front);
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 0.5rem;
+    margin: -0.14rem;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: navy;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    } }
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;     
+}
+
+.figure {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+padding: 1rem;
+} 
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    font-family: var(--paragraph-front);
+}
+
+footer {
+    max-width: 1500px;
+    font-family: var(--paragraph-front);
+    background-color: navy;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
