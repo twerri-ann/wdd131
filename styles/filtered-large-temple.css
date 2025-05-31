@@ -50,7 +50,7 @@ nav a {
   margin: 5px;
   cursor: pointer;
 }
-.nav-button:hover {
+nav a:hover {
   background-color: #005fa3;
 }
 
