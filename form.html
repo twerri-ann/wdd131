@@ -21,19 +21,10 @@
         <h2>Product Review</h2>
         <form method="get" action="review.html">
             <fieldset>
-                <label>Product Name
-                    <select name="subject" required>
-                    <option value="">Choose a Product</option>
-                    <option value="arm">Arm chair</option>
-                    <option value="murphy">Murphy Bed</option>
-                    <option value="lounge">Lounge Chair</option>
-                    <option value="futon">Futon</option>
-                    <option value="bean">Bean Bag Chair</option>
-                    <option value="ctable">C-table</option>
-                    <option value="wall">Wall Mounted Bookshelf</option>
-                    <option value="drum">Drum Table</option>  
-                    </select>
-                </label>
+                <label for="product">Product Name:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
                 <label>Overall Rating</label>
                 <div class="stars">
                     <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
@@ -43,7 +34,19 @@
 	                <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
                 </div>
                 <label>Date of Installation<input type="date" name="installationDate" required></label>
-            </fieldset>     
+
+                <div>Which feature did you find useful in the product? (Check all that apply)</div>
+                <label></label><input type="checkbox" name="durability" value="yes">durability</label>
+                <label></label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label></label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label></label><input type="checkbox" name="design" value="yes">Design</label>
+
+                <label for="feedback">List the places you have lived:</label>
+                    <textarea name="feedback" id="feedback" rows="4" placeholder="Stillwater Florida, Amsterdam Netherland, Tibuktu Mali"></textarea>
+            
+                <label>Your Name<input type="text" name="nname"></label>
+            </fieldset> 
+            <label><input type="submit" value="Post My Review"></label> 
         </form>
     </main>
 </body>

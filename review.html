@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="css/form.css"/>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>Your review has been submitted successfully.</p>
+
+  <p>You have submitted <span id="review-count">0</span> review(s).</p>
+
+  <footer id="footer"></footer>
+
+  <script>
+    // Count reviews using localStorage
+    const count = localStorage.getItem("reviewCount") || 0;
+    const newCount = parseInt(count) + 1;
+    localStorage.setItem("reviewCount", newCount);
+    document.getElementById("review-count").textContent = newCount;
+
+    // Load footer
+    fetch("includes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
