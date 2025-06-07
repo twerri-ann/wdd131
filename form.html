@@ -13,7 +13,37 @@
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
-<body></body>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <h2>Product Review</h2>
+        <form method="get" action="review.html">
+            <fieldset>
+                <label>Product Name
+                    <select name="subject" required>
+                    <option value="">Choose a Product</option>
+                    <option value="software">Arm chair</option>
+                    <option value="creative">Murphy Bed</option>
+                    <option value="info">Lounge Chair</option>
+                    <option value="data">Futon</option>
+                    <option value="construction">Bean Bag Chair</option>
+                    <option value="maufacturing">C-table</option>
+                    <option value="business">Wall Mounted Bookshelf</option>
+                    <option value="security">Drum Table</option>  
+                    </select>
+                </label>
+                <div>Audience</div>
+                    <label><input type="radio" name="audience" value="beginner"></label>
+                    <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                    <label><input type="radio" name="audience" value="advance">Advance</label> 
+                    <label><input type="radio" name="audience" value="advance">Advance</label> 
+                    <label><input type="radio" name="audience" value="advance">Advance</label>    
+            </fieldset>     
+        </form>
+    </main>
+</body>
 <footer>
     <p>&copy; <span id="year"></span> Terri-Ann Bassaragh, Jamaica </p><br>
     <p> Last modified: <span id="modified"></span></p>
