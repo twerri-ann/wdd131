@@ -11,7 +11,7 @@ header {
     width: 64px;
     height: auto;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--secondary-color );
 }
 
 h1, h2 {
