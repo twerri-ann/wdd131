@@ -26,6 +26,17 @@ const products = [
   }
 ];
 
+document.addEventListener("DOMContentLoaded", () => {
+  const productSelect = document.getElementById("product");
+
+  products.forEach(product => {
+    const option = document.createElement("option");
+    option.value = product.id;            // This sets the value sent on form submission
+    option.textContent = product.name;    // This is what the user sees
+    productSelect.appendChild(option);
+  });
+});
+
 const yearSpan = document.getElementById("year");
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
