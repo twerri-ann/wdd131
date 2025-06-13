@@ -45,7 +45,7 @@ h1 {
 }
 
 .navigation a:hover {
-    color: #00af9a;
+    color: darkgoldenrod;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -78,6 +78,7 @@ footer {
 
 .hero img {
     width: 100%;
+    align-self: center;
 }
 
 .hero h1 {
@@ -135,4 +136,82 @@ footer {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.form fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+    background-color: red;
+    align-items: center;
+}
+
+.form label {
+    display: block;
+    padding-top: 1rem;
+    color: yellow;
+    font-size: .9rem;
+    font-family: var(--paragraph-front);
+}
+
+.form div {
+    padding-top: 1rem;
+    color: yellow;
+    font-size: .9rem;
+    font-family: var(--paragraph-front);
+    
+}
+
+input[type="radio"] {
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea,
+.form select,
+.form input[type="date"] {
+    background-color: #fff;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.form input[type="submit"] {
+    border: none;
+    background-color: #8a2d3e;;
+    color: yellow;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #999;
+    align-self: center;
+}
+
+.form-items {
+    display: grid;
+    align-items: center;
+}
+
+.column1 {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
 }
