@@ -69,6 +69,7 @@ main,
 footer {
     max-width: 1500px;
     margin: 0 auto;
+    color: var(--secondary-color)
 }
 
 .hero {
