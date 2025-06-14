@@ -153,14 +153,67 @@ function displayMenus(filteredList) {
   });
 } 
 
-document.getElementById("menu").addEventListener("click", () => displayMenus(menus));
-document.getElementById("vegan").addEventListener("click", () => displayMenus(filterVegan()));
-document.getElementById("fingerfood").addEventListener("click", () => displayMenus(filterFingerFood()));
-document.getElementById("soup").addEventListener("click", () => displayMenus(filterSoup()));
-document.getElementById("salad").addEventListener("click", () => displayMenus(filterSalad()));
-document.getElementById("dessert").addEventListener("click", () => displayMenus(filterDessert()));
-document.getElementById("sidedish").addEventListener("click", () => displayMenus(filterSideDish()));
-document.getElementById("entrées").addEventListener("click", () => displayMenus(filterEntrées()));
+document.getElementById("menu").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "all");
+  displayMenus(menus);
+});
+
+document.getElementById("vegan").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "vegan");
+  displayMenus(filterVegan());
+});
+
+document.getElementById("fingerfood").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "fingerfood");
+  displayMenus(filterFingerFood());
+});
+
+document.getElementById("soup").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "soup");
+  displayMenus(filterSoup());
+});
+
+document.getElementById("salad").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "salad");
+  displayMenus(filterSalad());
+});
+
+document.getElementById("dessert").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "dessert");
+  displayMenus(filterDessert());
+});
+
+document.getElementById("sidedish").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "sidedish");
+  displayMenus(filterSideDish());
+});
+
+document.getElementById("entrées").addEventListener("click", () => {
+  localStorage.setItem("lastFilter", "entrées");
+  displayMenus(filterEntrées());
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lastFilter = localStorage.getItem("lastFilter");
+
+  if (lastFilter === "vegan") {
+    displayMenus(filterVegan());
+  } else if (lastFilter === "fingerfood") {
+    displayMenus(filterFingerFood());
+  } else if (lastFilter === "soup") {
+    displayMenus(filterSoup());
+  } else if (lastFilter === "salad") {
+    displayMenus(filterSalad());
+  } else if (lastFilter === "dessert") {
+    displayMenus(filterDessert());
+  } else if (lastFilter === "sidedish") {
+    displayMenus(filterSideDish());
+  } else if (lastFilter === "entrées") {
+    displayMenus(filterEntrées());
+  } else {
+    displayMenus(menus); // Default full menu
+  }
+});
 
 const yearSpan = document.getElementById("year");
 const currentYear = new Date().getFullYear();
