@@ -265,6 +265,15 @@ input[type="radio"] {
     border-radius: 12px 12px 0 0;
 }
 
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+
 .option {
     background-color: darkred;
     color-scheme: yellow;
