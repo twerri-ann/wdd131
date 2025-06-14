@@ -132,8 +132,8 @@ footer {
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: navy;
-    color: white;
+    background-color: yellow;
+    color: darkred;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -222,6 +222,9 @@ input[type="radio"] {
 }
 
 @media screen and (max-width: 600px) {
+    .hero {
+    display: none;
+    }
     .menu-buttons{
         display: none;
         flex-direction: column;
@@ -253,13 +256,13 @@ input[type="radio"] {
     border-radius: 12px 12px 0 0;
 }
 
-div {
+.option {
     background-color: darkred;
     color-scheme: yellow;
     font-family: var(--heading-font);
 }
 
-div :hover {
+.option :hover {
   background-color: darkgoldenrod;
 }
 
