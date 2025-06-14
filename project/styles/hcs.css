@@ -1,5 +1,5 @@
 :root {
-    --primary-color: red;
+    --primary-color: darkred;
     --secondary-color: yellow;
 
     --heading-font: 'Lora', serif;
@@ -100,7 +100,7 @@ footer {
     padding: 2rem;
 }
 main{
-    background-color: red;
+    background-color: var(--primary-color);
 }
 
 footer {
@@ -143,8 +143,12 @@ footer {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: .5rem 2%;
-    background-color: red;
+    background-color: #d61d35;
     align-items: center;
+}
+
+.form h2 {
+    background-color: #d61d35;
 }
 
 .form label {
@@ -160,6 +164,7 @@ footer {
     color: yellow;
     font-size: .9rem;
     font-family: var(--paragraph-front);
+    background-color: #d61d35;
     
 }
 
@@ -240,6 +245,14 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.menu-buttons img {
+    width: 100%;
+    height: 160px;        /* fixed height */
+    object-fit: cover;    /* crop & fill */
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
 div {
     background-color: darkred;
     color-scheme: yellow;
@@ -250,16 +263,3 @@ div :hover {
   background-color: darkgoldenrod;
 }
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.menu-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}

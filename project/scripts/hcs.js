@@ -153,67 +153,82 @@ function displayMenus(filteredList) {
   });
 } 
 
-document.getElementById("menu").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "all");
-  displayMenus(menus);
-});
-
-document.getElementById("vegan").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "vegan");
-  displayMenus(filterVegan());
-});
-
-document.getElementById("fingerfood").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "fingerfood");
-  displayMenus(filterFingerFood());
-});
-
-document.getElementById("soup").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "soup");
-  displayMenus(filterSoup());
-});
-
-document.getElementById("salad").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "salad");
-  displayMenus(filterSalad());
-});
-
-document.getElementById("dessert").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "dessert");
-  displayMenus(filterDessert());
-});
-
-document.getElementById("sidedish").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "sidedish");
-  displayMenus(filterSideDish());
-});
-
-document.getElementById("entrées").addEventListener("click", () => {
-  localStorage.setItem("lastFilter", "entrées");
-  displayMenus(filterEntrées());
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("menu").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "all");
+    displayMenus(menus);
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const lastFilter = localStorage.getItem("lastFilter");
-
-  if (lastFilter === "vegan") {
+  document.getElementById("vegan").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "vegan");
     displayMenus(filterVegan());
-  } else if (lastFilter === "fingerfood") {
+  });
+
+  document.getElementById("fingerfood").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "fingerfood");
     displayMenus(filterFingerFood());
-  } else if (lastFilter === "soup") {
+  });
+
+  document.getElementById("soup").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "soup");
     displayMenus(filterSoup());
-  } else if (lastFilter === "salad") {
+  });
+
+  document.getElementById("salad").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "salad");
     displayMenus(filterSalad());
-  } else if (lastFilter === "dessert") {
+  });
+
+  document.getElementById("dessert").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "dessert");
     displayMenus(filterDessert());
-  } else if (lastFilter === "sidedish") {
+  });
+
+  document.getElementById("sidedish").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "sidedish");
     displayMenus(filterSideDish());
-  } else if (lastFilter === "entrées") {
+  });
+
+  document.getElementById("entrées").addEventListener("click", () => {
+    localStorage.setItem("lastFilter", "entrées");
     displayMenus(filterEntrées());
-  } else {
-    displayMenus(menus); // Default full menu
+  });
+
+  // Restore last filter on page load
+  const lastFilter = localStorage.getItem("lastFilter");
+  if (lastFilter) {
+    // Optional: Call displayMenus with the last filter when the page loads
+    // You might want a switch or mapping here to call the right filter function
+    switch (lastFilter) {
+      case "vegan":
+        displayMenus(filterVegan());
+        break;
+      case "fingerfood":
+        displayMenus(filterFingerFood());
+        break;
+      case "soup":
+        displayMenus(filterSoup());
+        break;
+      case "salad":
+        displayMenus(filterSalad());
+        break;
+      case "dessert":
+        displayMenus(filterDessert());
+        break;
+      case "sidedish":
+        displayMenus(filterSideDish());
+        break;
+      case "entrées":
+        displayMenus(filterEntrées());
+        break;
+      default:
+        displayMenus(menus); // or show all menus by default
+    }
   }
 });
+
 
 const yearSpan = document.getElementById("year");
 const currentYear = new Date().getFullYear();
