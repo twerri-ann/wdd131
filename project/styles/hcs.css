@@ -235,6 +235,7 @@ input[type="radio"] {
         padding: 1rem;
         top: auto;
         position: absolute;
+        display: block;
     }
     .menu-buttons{
         display: none;
