@@ -216,7 +216,18 @@ input[type="radio"] {
     grid-template-columns: 1fr 2fr;
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .menu-buttons{
+        display: none;
+        flex-direction: column;
+        background-color: darkred;
+        width: 100%;
+    }
+    .menu-buttons.active{
+        display: flex;
+    }
+    
+}
 
 .menu-buttons {
   display: inline-block;
