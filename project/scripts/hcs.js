@@ -108,7 +108,28 @@ const menus = [
     imageUrl:
     "https://i.pinimg.com/736x/46/93/f8/4693f8ebe7c3de17022838602013a1b8.jpg"
   },
-];
+  {
+    dishName: "Spiced Beef Kofta",
+    veganfriendly: "No",
+    dishType: "Finger Food",
+    imageUrl:
+    "https://i.pinimg.com/736x/15/bf/9f/15bf9f5477c7f004dfa19300dd5d2611.jpg"
+  },
+  {
+    dishName: "Rasgulla",
+    veganfriendly: "No",
+    dishType: "Dessert",
+    imageUrl:
+    "https://i.pinimg.com/736x/bb/2b/85/bb2b85fb1781219b90f9ee1fb47a1a64.jpg"
+  },
+  {
+    dishName: "Minestrone",
+    veganfriendly: "Yes",
+    dishType: "Soup",
+    imageUrl:
+    "https://i.pinimg.com/736x/6e/bc/a2/6ebca2d24359a83d693a0b12bddb6ec5.jpg"
+  }
+ ];
 function filterVegan() {
   return menus.filter(t => t.veganfriendly.trim() === "Yes");
 }
