@@ -245,6 +245,11 @@ input[type="radio"] {
     .menu-buttons.active{
         display: flex;
     }
+    .menuContainer{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 .menu-buttons {
@@ -266,7 +271,7 @@ input[type="radio"] {
     border-radius: 12px 12px 0 0;
 }
 
-.menu-container {
+.menuContainer {
   width: 100%;           /* makes the image fill its container */
   height: auto;          /* keeps the aspect ratio */
   object-fit: cover;     /* crops the image if necessary */
