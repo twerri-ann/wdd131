@@ -166,7 +166,7 @@ function displayMenus(filteredList) {
     card.className = "menu-card";
     card.innerHTML = `
       <h3>${t.dishName}</h3>
-      <img src="${t.imageUrl}" alt="${t.dishName}" loading="lazy">
+      <img src="${t.imageUrl}" alt="${t.dishName}" loading="lazy" style="width: 100%; height: auto;">
       <p><strong>Vegan:</strong> ${t.veganfriendly}</p>
       <p><strong>Dish Type:</strong> ${t.dishType}</p>
     `;

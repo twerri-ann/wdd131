@@ -277,6 +277,7 @@ input[type="radio"] {
   object-fit: cover;     /* crops the image if necessary */
   display: block;
   border-radius: 12px;
+  margin: 0 auto;
 }
 
 
