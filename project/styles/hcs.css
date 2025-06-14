@@ -148,7 +148,7 @@ footer {
 }
 
 .form h2 {
-    background-color: #d61d35;
+    background-color: var(--primary-color);
 }
 
 .form label {
@@ -192,6 +192,7 @@ input[type="radio"] {
 .form input[type="radio"],
 .form input[type="checkbox"] {
     margin-right: 6px;
+    color: black;
 }
 
 .form input[type="submit"] {
@@ -222,8 +223,17 @@ input[type="radio"] {
 }
 
 @media screen and (max-width: 600px) {
-    .hero {
-    display: none;
+    .hero img {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .hero h1,
+    .hero article {
+        font-size: 1rem;
+        padding: 1rem;
+        top: auto;
+        position: relative;
     }
     .menu-buttons{
         display: none;
@@ -234,7 +244,6 @@ input[type="radio"] {
     .menu-buttons.active{
         display: flex;
     }
-
 }
 
 .menu-buttons {
