@@ -88,11 +88,11 @@ footer {
     right: 2rem;
     text-align: center;
     padding: .5rem;
-    background-color: #ffffff61;
+    background-color: rgba(255, 0, 0, 0.3);
 }
 
 .hero article {
-    background-color: #ffffff61;
+    background-color: rgba(255, 0, 0, 0.3);
     position: absolute;
     top: 9rem;
     left: 2rem;
