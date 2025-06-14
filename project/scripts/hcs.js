@@ -23,7 +23,7 @@
     });
   });
 
-const temples = [
+const menus = [
   {
     dishName: "Veggie Spring Rolls",
     veganfriendly: "Yes",
@@ -109,6 +109,59 @@ const temples = [
     "https://i.pinimg.com/736x/46/93/f8/4693f8ebe7c3de17022838602013a1b8.jpg"
   },
 ];
+function filterVegan() {
+  return menus.filter(t => t.veganfriendly.split(",")[0].trim() === "Yes");
+}
+
+function filterFingerFood() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Finger Food");
+}
+
+function filterSoup() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Soup");
+}
+
+function filterSalad() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Salad");
+}
+
+function filterDessert() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Dessert");
+}
+
+function filterSideDish() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Side Dish");
+}
+
+function filterEntrées() {
+  return menus.filter(t => t.dishType.split(",")[0].trim() === "Entrées");
+}
+
+function displayMenus(filteredList) {
+  const container = document.getElementById("menuContainer");
+  container.innerHTML = ""; // Clear existing content
+
+  filteredList.forEach(t => {
+    const card = document.createElement("div");
+    card.className = "menu-card";
+    card.innerHTML = `
+      <h3>${t.dishName}</h3>
+      <img src="${t.imageUrl}" alt="${t.dishName}" loading="lazy">
+      <p><strong>Vegan:</strong> ${t.veganfriendly}</p>
+      <p><strong>Dish Type:</strong> ${t.dishType}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+document.getElementById("menu").addEventListener("click", () => displayMenus(menus));
+document.getElementById("vegan").addEventListener("click", () => displayMenus(filterVegan()));
+document.getElementById("fingerfood").addEventListener("click", () => displayMenus(filterFingerFood()));
+document.getElementById("soup").addEventListener("click", () => displayMenus(filterSoup()));
+document.getElementById("salad").addEventListener("click", () => displayMenus(filterSalad()));
+document.getElementById("dessert").addEventListener("click", () => displayMenus(filterDessert()));
+document.getElementById("sidedish").addEventListener("click", () => displayMenus(filterSideDish()));
+document.getElementById("entrées").addEventListener("click", () => displayMenus(filterEntrées()));
 
 const yearSpan = document.getElementById("year");
 const currentYear = new Date().getFullYear();
