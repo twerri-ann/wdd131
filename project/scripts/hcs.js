@@ -110,36 +110,35 @@ const menus = [
   },
 ];
 function filterVegan() {
-  return menus.filter(t => t.veganfriendly.split(",")[0].trim() === "Yes");
+  return menus.filter(t => t.veganfriendly.trim() === "Yes");
 }
 
 function filterFingerFood() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Finger Food");
+  return menus.filter(t => t.dishType.trim() === "Finger Food");
 }
 
 function filterSoup() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Soup");
+  return menus.filter(t => t.dishType.trim() === "Soup");
 }
-
 function filterSalad() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Salad");
+  return menus.filter(t => t.dishType.trim() === "Salad");
 }
 
 function filterDessert() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Dessert");
+  return menus.filter(t => t.dishType.trim() === "Dessert");
 }
 
 function filterSideDish() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Side Dish");
+  return menus.filter(t => t.dishType.trim() === "Side Dish");
 }
 
 function filterEntrées() {
-  return menus.filter(t => t.dishType.split(",")[0].trim() === "Entrées");
+  return menus.filter(t => t.dishType.trim() === "Entrées");
 }
 
 function displayMenus(filteredList) {
   const container = document.getElementById("menuContainer");
-  container.innerHTML = ""; // Clear existing content
+  container.innerHTML = "";
 
   filteredList.forEach(t => {
     const card = document.createElement("div");
@@ -152,7 +151,7 @@ function displayMenus(filteredList) {
     `;
     container.appendChild(card);
   });
-}
+} 
 
 document.getElementById("menu").addEventListener("click", () => displayMenus(menus));
 document.getElementById("vegan").addEventListener("click", () => displayMenus(filterVegan()));
